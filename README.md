@@ -4,16 +4,16 @@ Nimbus is a project management dashboard built as a portfolio piece. It combines
 
 The project is fully client side and uses realistic dummy data, so it can be explored end to end without a backend.
 
-## Live Preview
-
-`https://nimbus.vercel.app`
+Live Demo: [Nimbus](https://nimbus-pm.vercel.app/)
 
 ## Screenshots
 
 <p align="center">
-  <img src="docs/screenshots/dashboard.png" alt="Dashboard analytics" width="32%" />
-  <img src="docs/screenshots/board.png" alt="Kanban board" width="32%" />
-  <img src="docs/screenshots/new-task.png" alt="Task detail modal" width="32%" />
+<img src="docs/screenshots/dashboard.png" alt="Dashboard analytics" width="65%" />
+
+<p align="center">
+  <img src="docs/screenshots/board.png" alt="Kanban board" width="45%" />
+  <img src="docs/screenshots/new-task.png" alt="Task detail modal" width="54%" />
 </p>
 
 ## Features
