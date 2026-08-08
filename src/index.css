@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --color-canvas-light: #f5f6f8;
+  --color-canvas-dark: #0b0e14;
+
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #11151c;
+
+  --color-surface-raised-light: #ffffff;
+  --color-surface-raised-dark: #161b24;
+
+  --color-border-light: #e4e6ea;
+  --color-border-dark: #232833;
+
+  --color-ink-light: #14161a;
+  --color-ink-dark: #e7e9ee;
+
+  --color-muted-light: #6b7280;
+  --color-muted-dark: #8b93a3;
+
+  --color-brand-50: #eef1ff;
+  --color-brand-100: #e0e4ff;
+  --color-brand-200: #c6cbff;
+  --color-brand-300: #a3a8ff;
+  --color-brand-400: #7f7ff5;
+  --color-brand-500: #6a5cf0;
+  --color-brand-600: #5741e0;
+  --color-brand-700: #4732bd;
+  --color-brand-800: #3a2b95;
+  --color-brand-900: #302874;
+
+  --color-success: #1f9d55;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-info: #2563eb;
+}
+
+@layer base {
+  * {
+    @apply border-border-light dark:border-border-dark;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-canvas-light dark:bg-canvas-dark text-ink-light dark:text-ink-dark font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-brand-300/50;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border-light dark:bg-border-dark rounded-full;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  .card-surface {
+    @apply bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark;
+  }
+}
